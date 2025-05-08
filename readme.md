@@ -40,12 +40,12 @@ $ npm install
 $ create database carlsmed_db;
 ```
 
-3. Retrieve connection string from newly created database and paste into carlsmed-project/.env file
+3. Retrieve connection string from newly created database and paste into carlsmed-project/server/.env file
 ```sh
 DATABASE_URL="postgres://<your user>@localhost:5432/carlsmed_db"
 ```
 
-4. I've created some user keys for you to test out with AWS-S3. These belong to a new user specifically for this project and will be deleted after evaluation of this project. Paste into carlsmed-project/.env file
+4. I've created some user keys for you to test out with AWS-S3. These belong to a new user specifically for this project and will be deleted after evaluation of this project. Paste into carlsmed-project/server/.env file
 ```sh
 AWS_ACCESS_KEY="<send in 3rd party>"
 AWS_SECRET_KEY="<send in 3rd party>"
@@ -75,9 +75,9 @@ I've never used Vite before and am pretty impressed with it. In the past, I've o
 For future work and enhancements, I'd put a bit more effort into the styles and making the application look and behave with a bit more fluidity..which might include loading spinners, highly responsive styling at small screens. I kind of broke a rule of mine using flexbox for layout specific styling when I should've used css-grid. Again, not under a time constraint I'd go back and change this.
 
 ### Setup and Run
-Working specifically in the carlsmed-project/client in a separate terminal from the running server.
+Working specifically in the carlsmed-project/client directorty, run the following in a separate terminal from the running server app.
 
-### Prerquisites
+### Prerequisites
 -   Node.js v20 or greater installed
 
 1. Install dependencies
