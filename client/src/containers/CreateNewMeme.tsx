@@ -27,14 +27,23 @@ const Form = styled.form`
   width: 400px
 `;
 
-const Input = styled.input`
+const FileInput = styled.input`
   height: 45px;
   margin-bottom: 50px;
+`;
+
+const TextInput = styled.input`
+  height: 45px;
+  margin-bottom: 50px;
+  background: whitesmoke;
+  border-radius: 4px;
 `;
 
 const TextArea = styled.textarea`
   height: 130px;
   margin-bottom: 50px;
+  background: whitesmoke;
+  border-radius: 4px;
 `;
 
 const Label = styled.label`
@@ -47,6 +56,7 @@ const SubmitButton = styled.button`
   font-size: x-large;
   font-weight: 700;
   width: 215px;
+  align-self: flex-end;
 `;
 
 function CreateNewMeme() {
@@ -77,7 +87,7 @@ function CreateNewMeme() {
       if (!response.ok) {
         throw new Error(`Error submitting meme memes -> status: ${response.status}`);
       }
-      const json = await response.json();
+      await response.json();
       navigate('/')
 
     } catch (e) {
@@ -111,7 +121,7 @@ function CreateNewMeme() {
         :
           <Form onSubmit={(e) => submitNewMeme(e)}>
             <Label>Choose Meme To Upload</Label>
-            <Input
+            <FileInput
               onChange={(e) => setFile(e)}
               name='file'
               type='file'
@@ -119,7 +129,7 @@ function CreateNewMeme() {
               required
             />
             <Label>Title</Label>
-            <Input
+            <TextInput
               onChange={(e) => updateFields(e)}
               name='title'
               type='text'

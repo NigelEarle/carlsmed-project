@@ -14,10 +14,11 @@ const ClickableContainer = styled.a`
   background: whitesmoke;
   display: flex;
   flex-direction: column;
-  width: 25%;
+  width: 28%;
   padding: 2.5em;
   border-radius: 5px;
   border: lightgrey;
+  margin-bottom: 36px;
 `;
 
 const Img = styled.img`

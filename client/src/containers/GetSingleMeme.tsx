@@ -40,7 +40,7 @@ const MemeDetailsContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 70%;
-  padding: 4.5em 10em;
+  padding: 4%;
   border-radius: 5px;
   border: lightgrey;
 `;

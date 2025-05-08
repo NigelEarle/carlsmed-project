@@ -20,20 +20,21 @@ const HeaderContainer = styled.div`
 
 const BodyContainer = styled.div`
   display: flex;
-  // justify-content: center;
-  // flex-wrap: wrap;
+  justify-content: center;
   padding-top: 50px;
+  width: 100%
 `;
 
 const MemesContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  width: 100%;
 `;
 
 const InfoText = styled.strong`
-  margin-top: 15%;
-  font-size: xxx-large;
+  margin-top: 7%;
+  font-size: xx-large;
 `;
 
 const Button = styled.button`
@@ -76,6 +77,7 @@ function MemesHome() {
           <MemesContainer>
             {memes.map((current: MemeItem) => (
               <MemeCard
+                key={current.id}
                 id={current.id}
                 imageUrl={current.meme_url}
                 title={current.title}
