@@ -32,9 +32,7 @@ const FileInput = styled.input`
   margin-bottom: 50px;
 `;
 
-const TextInput = styled.input`
-  height: 45px;
-  margin-bottom: 50px;
+const TextInput = styled(FileInput)`
   background: whitesmoke;
   border-radius: 4px;
 `;
