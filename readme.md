@@ -35,23 +35,31 @@ Working specifically in the carlsmed-project/server.
 $ npm install
 ```
 
-2. Create database carslmed_db inside of PostgreSQL server
+2. Exec into psql shell and create database carslmed_db
 ```sh
+$ psql
+
+// inside of postgres shell
 $ create database carlsmed_db;
 ```
 
-3. Retrieve connection string from newly created database and paste into carlsmed-project/server/.env file
+3. Run migrations.
+```sh
+$ npx prisma migrate dev
+```
+
+4. Retrieve connection string from newly created database and paste into carlsmed-project/server/.env file
 ```sh
 DATABASE_URL="postgres://<your user>@localhost:5432/carlsmed_db"
 ```
 
-4. I've created some user keys for you to test out with AWS-S3. These belong to a new user specifically for this project and will be deleted after evaluation of this project. Paste into carlsmed-project/server/.env file
+5. I've created some user keys for you to test out with AWS-S3. These belong to a new user specifically for this project and will be deleted after evaluation of this project. Paste into carlsmed-project/server/.env file
 ```sh
 AWS_ACCESS_KEY="<send in 3rd party>"
 AWS_SECRET_KEY="<send in 3rd party>"
 ```
 
-5. Run the application with npm. After this step the server should now be up and running and ready to accept requests!
+6. Run the application with npm. After this step the server should now be up and running and ready to accept requests!
 ```sh
 $ npm run dev
 
